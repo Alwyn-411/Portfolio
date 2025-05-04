@@ -1,0 +1,46 @@
+<section class="header">
+    <div class="name-holder">
+        <h1>
+            <a href="/">Alwyn's Portfolio</a>
+        </h1>
+    </div>
+    <div class="navigator">
+        <ul class="links">
+            <li><a href="/About">About</a></li>
+            <li><a href="/Projects">Projects</a></li>
+            <li><a href="/Contact">Contact</a></li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 2rem;
+        align-items: center;
+    }
+
+    .name-holder h1 a{
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        font-family: 'Kurale', serif;
+        text-decoration: none;
+    }
+
+    .navigator .links{
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .navigator .links a{
+        text-decoration: none;
+        color: var(--secondary-color);
+    }
+
+    .navigator .links a:hover{
+        color: var(--terinary-color);
+    }
+
+</style>
