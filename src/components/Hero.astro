@@ -1,3 +1,7 @@
+---
+import { Image } from 'astro:assets';
+import ideaToProductionImage from '../assets/idea2prod.svg';
+---
 <section class="hero">
     <div class="pitch">
         <h2>
@@ -8,8 +12,8 @@
         </p>
     </div>
 
-    <div>
-        <img src="/images/hero.png" alt="Hero Image" />
+    <div class="hero-image-holder">
+        <Image src={ideaToProductionImage} alt="Idea to Production" width={600} height={600} loading={'eager'}/>
     </div>
 </section>
 
@@ -18,7 +22,7 @@
     .hero{
         display: flex;
         justify-content: space-between;
-        padding-inline: 2rem;
+        padding-inline: 5rem;
         align-items: center;
     }
 
@@ -35,6 +39,7 @@
     .pitch p{
         font-size: 1.2rem;
         font-family: 'Kurale', serif;
+        font-style: italic;
         color: var(--primary-color);
     }
 
