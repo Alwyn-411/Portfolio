@@ -1,48 +1,123 @@
-# Astro Starter Kit: Basics
+# 🌐 Personal Portfolio Website
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Welcome to my personal portfolio website — a modern, responsive, and interactive site built to showcase my skills, projects, and experience as a web developer. This project demonstrates my proficiency in frontend development, UI/UX design, and deployment best practices.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Live Demo
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+🔗 [View the live site here](https://yourusername.github.io/your-repo-name)
+(Replace this link with the actual deployed site)
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠️ Technologies Used
 
-```text
-/
-├── public/
-│   └── favicon.svg
+| Category       | Tech Stack                        |
+| -------------- | --------------------------------- |
+| **Frontend**   | Astro, HTML, CSS, JavaScript      |
+| **Styling**    | Tailwind CSS                      |
+| **Build Tool** | Vite                              |
+| **Deployment** | GitHub Pages (via GitHub Actions) |
+
+---
+
+## 🧱 Project Structure
+
+.
+├── public/ # Static assets
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│ ├── components/ # Reusable UI elements
+│ ├── layouts/ # Shared page layout components
+│ ├── pages/ # Main routes (Astro uses file-based routing)
+│ ├── styles/ # Global and scoped styles
+│ ├── data/ # Project, skills, and contact data
+│ └── utils/ # Utility functions
+├── astro.config.mjs # Astro configuration
+├── package.json # Project metadata and dependencies
+└── README.md # You're reading it
+
+---
+
+## 🔑 Key Features
+
+- ✅ Responsive design (mobile-first)
+- 🌙 Dark/light mode toggle
+- 🎯 Project filtering system
+- 🎞️ Smooth animations and transitions
+- 🧠 SEO optimization
+- ⚡ Performance-focused build with Astro
+- 📩 Contact form with email integration (via Formsubmit / Formspree)
+- 🌍 Deployed using GitHub Actions to a `prod` branch
+
+---
+
+## 📬 Contact Form
+
+The contact form uses a 3rd-party service (like [Formsubmit](https://formsubmit.co) or [Formspree](https://formspree.io)) to handle form submissions and deliver them to your email — no backend needed.
+
+---
+
+## 🧑‍💻 Sections Overview
+
+- **Hero** — Eye-catching intro with name and call-to-action
+- **About Me** — Summary of my background and skills
+- **Projects** — Interactive portfolio cards with GitHub and live links
+- **Skills** — Technology stack and tools visualized
+- **Experience** — Work history and education timeline
+- **Contact** — Reach-out form with real-time validation
+- **Footer** — Social icons and copyright
+
+---
+
+## ⚙️ Getting Started
+
+### 🧪 Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run in development mode
+npm run dev
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### 🏗️ Build for Production
 
-## 🧞 Commands
+```bash
+npm run build
+```
 
-All commands are run from the root of the project, from a terminal:
+### 🔍 Preview the Production Build
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+```bash
+npm run preview
+```
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🚀 Deployment (GitHub Pages via GitHub Actions)
+
+This project is automatically deployed to the `prod` branch using a GitHub Actions workflow.
+
+1. Builds are triggered on pushes to `main`
+2. Output in `dist/` is pushed to the `prod` branch
+3. GitHub Pages serves the site from the `prod` branch root
+
+Make sure your `astro.config.mjs` has the correct base:
+
+```js
+base: "/Portfolio/";
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♀️ Want to Collaborate?
+
+Feel free to fork, submit issues, or contribute ideas! Connect with me on [LinkedIn](https://linkedin.com/in/yourprofile) or drop me an email via the contact form.
