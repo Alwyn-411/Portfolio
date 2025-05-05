@@ -7,8 +7,6 @@ Welcome to my personal portfolio website — a modern, responsive, and interacti
 ## 🚀 Live Demo
 
 🔗 [View the live site here](https://alwyn-411.github.io/Portfolio/)
-(Replace this link with the actual deployed site)
-
 ---
 
 ## 🛠️ Technologies Used
@@ -22,7 +20,6 @@ Welcome to my personal portfolio website — a modern, responsive, and interacti
 ---
 
 ## 🧱 Project Structure
-
 ├── public/ # Static assets
 ├── src/
 │ ├── components/ # Reusable UI elements
