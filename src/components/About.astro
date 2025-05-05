@@ -9,8 +9,7 @@ import aboutImage from '../assets/about.svg';
             alt="Developer illustration" 
             width={600} 
             height={600} 
-            loading={'eager'}
-            class="about-image"
+            loading='eager'
         />
     </div>
     <div class="about-content">
@@ -30,7 +29,7 @@ import aboutImage from '../assets/about.svg';
 <style>
   .about {
     display: flex;
-    padding: 6rem 5rem;
+    padding-inline: 5rem;
     justify-content: center;
     align-items: center;
     gap: 4rem;
@@ -60,15 +59,6 @@ import aboutImage from '../assets/about.svg';
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .about-image {
-    transition: transform 0.5s ease-in-out;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
-  }
-
-  .about-image:hover {
-    transform: translateY(-10px);
   }
 
   .section-title {
@@ -143,12 +133,6 @@ import aboutImage from '../assets/about.svg';
     .image-holder {
       order: -1;
       margin-bottom: 2rem;
-    }
-
-    .about-image {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
     }
   }
 
