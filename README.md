@@ -6,7 +6,7 @@ Welcome to my personal portfolio website — a modern, responsive, and interacti
 
 ## 🚀 Live Demo
 
-🔗 [View the live site here](https://yourusername.github.io/your-repo-name)
+🔗 [View the live site here](https://alwyn-411.github.io/Portfolio/)
 (Replace this link with the actual deployed site)
 
 ---
@@ -16,7 +16,6 @@ Welcome to my personal portfolio website — a modern, responsive, and interacti
 | Category       | Tech Stack                        |
 | -------------- | --------------------------------- |
 | **Frontend**   | Astro, HTML, CSS, JavaScript      |
-| **Styling**    | Tailwind CSS                      |
 | **Build Tool** | Vite                              |
 | **Deployment** | GitHub Pages (via GitHub Actions) |
 
@@ -24,7 +23,6 @@ Welcome to my personal portfolio website — a modern, responsive, and interacti
 
 ## 🧱 Project Structure
 
-.
 ├── public/ # Static assets
 ├── src/
 │ ├── components/ # Reusable UI elements
