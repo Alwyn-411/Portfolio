@@ -12,18 +12,18 @@ import ideaToProductionImage from '../assets/idea2prod.svg';
         </p>
     </div>
 
-    <div class="hero-image-holder">
+    <div class="image-holder">
         <Image src={ideaToProductionImage} alt="Idea to Production" width={600} height={600} loading={'eager'}/>
     </div>
 </section>
 
 <style>
-
     .hero{
         display: flex;
         justify-content: space-between;
         padding-inline: 5rem;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .pitch h2{
@@ -42,7 +42,6 @@ import ideaToProductionImage from '../assets/idea2prod.svg';
         font-style: italic;
         color: var(--primary-color);
     }
-
     
     @keyframes typing {
         from { width: 0 }
@@ -54,4 +53,15 @@ import ideaToProductionImage from '../assets/idea2prod.svg';
         50% { border-color: var(--terinary-color); }
     }
 
+    .hero .image-holder img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            padding-inline: 1rem;
+        }
+    }
 </style>
