@@ -86,7 +86,7 @@ This project is automatically deployed to the `prod` branch using a GitHub Actio
 Make sure your `astro.config.mjs` has the correct base:
 
 ```js
-base: "/Portfolio/";
+base: '/Portfolio/';
 ```
 
 ---

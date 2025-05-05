@@ -4,25 +4,30 @@ import mail from '../assets/mail.svg';
 import phone from '../assets/phone.svg';
 import linkedin from '../assets/linkedin.svg';
 import github from '../assets/github.svg';
-import Form from "../components/Form.astro";
+import Form from '../components/Form.astro';
 ---
+
 <section class="contact" id="contact">
-    <h2>Want to get in touch?</h2>
-    <Form/>
-    <div class="contact-links">
-        <a href="mailto:alwyn411@gmail.com" class="contact-item" aria-label="Email">
-            <Image src={mail} alt="email" width={30} height={30}/>
-        </a>
-        <a href="tel:+916383028744" class="contact-item" aria-label="Phone">
-            <Image src={phone} alt="phone" width={30} height={30}/>
-        </a>
-        <a href="https://www.linkedin.com/in/v-alwyn-yemlin-raj-1430b41b9/" class="contact-item" aria-label="LinkedIn">
-            <Image src={linkedin} alt="linkedin" width={30} height={30}/>
-        </a>
-        <a href="https://github.com/Alwyn-411" class="contact-item" aria-label="GitHub">
-            <Image src={github} alt="github" width={30} height={30}/>
-        </a>
-    </div>
+  <h2>Want to get in touch?</h2>
+  <Form />
+  <div class="contact-links">
+    <a href="mailto:alwyn411@gmail.com" class="contact-item" aria-label="Email">
+      <Image src={mail} alt="email" width={30} height={30} />
+    </a>
+    <a href="tel:+916383028744" class="contact-item" aria-label="Phone">
+      <Image src={phone} alt="phone" width={30} height={30} />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/v-alwyn-yemlin-raj-1430b41b9/"
+      class="contact-item"
+      aria-label="LinkedIn"
+    >
+      <Image src={linkedin} alt="linkedin" width={30} height={30} />
+    </a>
+    <a href="https://github.com/Alwyn-411" class="contact-item" aria-label="GitHub">
+      <Image src={github} alt="github" width={30} height={30} />
+    </a>
+  </div>
 </section>
 
 <style>
@@ -66,7 +71,9 @@ import Form from "../components/Form.astro";
     align-items: center;
     padding: 1rem;
     border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s;
     background-color: rgba(255, 255, 255, 0.05);
     min-width: 120px;
     text-decoration: none;
@@ -88,11 +95,11 @@ import Form from "../components/Form.astro";
     .contact {
       padding: 3rem 1rem;
     }
-    
+
     .contact-links {
       gap: 1rem;
     }
-    
+
     .contact-item {
       min-width: 100px;
       padding: 0.8rem;

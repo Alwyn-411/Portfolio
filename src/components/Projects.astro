@@ -6,68 +6,73 @@ import UserForgeImage from '../assets/go.svg';
 
 const projects = [
   {
-    title: "Vigilance",
-    originalName: "Proctoring App",
-    description: "AI-powered exam monitoring system that uses ML techniques to analyze user behavior and flag suspicious activities during test sessions.",
-    tech: ["React", "TypeScript", "Machine Learning", "Computer Vision"],
-    link: "https://github.com/Alwyn-411/proctoring-app",
-    image: TestProctorImage
+    title: 'Vigilance',
+    originalName: 'Proctoring App',
+    description:
+      'AI-powered exam monitoring system that uses ML techniques to analyze user behavior and flag suspicious activities during test sessions.',
+    tech: ['React', 'TypeScript', 'Machine Learning', 'Computer Vision'],
+    link: 'https://github.com/Alwyn-411/proctoring-app',
+    image: TestProctorImage,
   },
   {
-    title: "StyleExtract",
-    originalName: "Excel Style Parser",
-    description: "Tool that extracts and preserves styling information from Excel spreadsheets, maintaining visual fidelity when importing data.",
-    tech: ["React", "TypeScript", "ExcelJS", "CSS"],
-    link: "https://github.com/Alwyn-411/Excel-Style-Parser",
-    image: StyleExtractImage
+    title: 'StyleExtract',
+    originalName: 'Excel Style Parser',
+    description:
+      'Tool that extracts and preserves styling information from Excel spreadsheets, maintaining visual fidelity when importing data.',
+    tech: ['React', 'TypeScript', 'ExcelJS', 'CSS'],
+    link: 'https://github.com/Alwyn-411/Excel-Style-Parser',
+    image: StyleExtractImage,
   },
   {
-    title: "UserForge",
-    originalName: "REST User Service",
-    description: "Lightweight Go-based user management microservice with authentication, authorization, and profile management capabilities.",
-    tech: ["Go", "REST API", "JWT", "Microservices"],
-    link: "https://github.com/Alwyn-411/REST-User-Service",
-    image: UserForgeImage
-  }
+    title: 'UserForge',
+    originalName: 'REST User Service',
+    description:
+      'Lightweight Go-based user management microservice with authentication, authorization, and profile management capabilities.',
+    tech: ['Go', 'REST API', 'JWT', 'Microservices'],
+    link: 'https://github.com/Alwyn-411/REST-User-Service',
+    image: UserForgeImage,
+  },
 ];
 ---
 
 <section class="projects" id="projects">
   <h2 class="section-title">Projects</h2>
   <p class="section-intro">
-    Here are some of my recent projects. Each represents my passion for clean code, 
-    innovative solutions, and continuous learning.
+    Here are some of my recent projects. Each represents my passion for clean code, innovative
+    solutions, and continuous learning.
   </p>
-  
+
   <div class="projects-grid">
-    {projects.map((project) => (
-      <div class="project-card">
-        <div class="project-content">
-          <div class="project-header">
-            <h3 class="project-title">{project.title}</h3>
-            <span class="project-original-name">{project.originalName}</span>
+    {
+      projects.map((project) => (
+        <div class="project-card">
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">{project.title}</h3>
+              <span class="project-original-name">{project.originalName}</span>
+            </div>
+            <p class="project-description">{project.description}</p>
+            <div class="tech-tags">
+              {project.tech.map((tech) => (
+                <span class="tech-tag">{tech}</span>
+              ))}
+            </div>
+            <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-link">
+              View Project <span class="arrow">→</span>
+            </a>
           </div>
-          <p class="project-description">{project.description}</p>
-          <div class="tech-tags">
-            {project.tech.map(tech => (
-              <span class="tech-tag">{tech}</span>
-            ))}
+          <div class="project-image-container">
+            <Image
+              src={project.image}
+              alt={`${project.title} project illustration`}
+              width={300}
+              height={200}
+              class="project-image"
+            />
           </div>
-          <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-link">
-            View Project <span class="arrow">→</span>
-          </a>
         </div>
-        <div class="project-image-container">
-          <Image 
-            src={project.image} 
-            alt={`${project.title} project illustration`} 
-            width={300} 
-            height={200} 
-            class="project-image"
-          />
-        </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </section>
 
@@ -79,13 +84,17 @@ const projects = [
   }
 
   .projects::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(var(--bg-gradient-1), 0.05), rgba(var(--bg-gradient-2), 0.1));
+    background: linear-gradient(
+      135deg,
+      rgba(var(--bg-gradient-1), 0.05),
+      rgba(var(--bg-gradient-2), 0.1)
+    );
     z-index: -1;
     border-radius: 2rem;
   }
@@ -99,7 +108,7 @@ const projects = [
   }
 
   .section-title::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -10px;
     left: 0;
@@ -129,7 +138,9 @@ const projects = [
     background: rgba(var(--bg-gradient-1), 0.05);
     border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
     position: relative;
   }
 
@@ -214,7 +225,11 @@ const projects = [
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(var(--bg-gradient-1), 0.1), rgba(var(--bg-gradient-2), 0.2));
+    background: linear-gradient(
+      135deg,
+      rgba(var(--bg-gradient-1), 0.1),
+      rgba(var(--bg-gradient-2), 0.2)
+    );
     padding: 1.5rem;
     overflow: hidden;
   }
@@ -234,7 +249,7 @@ const projects = [
     .projects {
       padding: 4rem 3rem;
     }
-    
+
     .project-title {
       font-size: 1.6rem;
     }
@@ -252,16 +267,16 @@ const projects = [
     .section-intro {
       font-size: 1rem;
     }
-    
-    .project-card, 
+
+    .project-card,
     .project-card:nth-child(even) {
       flex-direction: column;
     }
-    
+
     .project-content {
       padding: 1.5rem;
     }
-    
+
     .project-image-container {
       min-height: 200px;
     }
@@ -275,15 +290,15 @@ const projects = [
     .section-title {
       font-size: 1.8rem;
     }
-    
+
     .project-title {
       font-size: 1.4rem;
     }
-    
+
     .tech-tags {
       gap: 0.4rem;
     }
-    
+
     .tech-tag {
       font-size: 0.7rem;
       padding: 0.2rem 0.6rem;

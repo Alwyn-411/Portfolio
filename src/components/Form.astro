@@ -1,93 +1,99 @@
 <section class="contact-form">
-    <form action="https://formsubmit.co/alwyn411@gmail.com" method="POST">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Your Name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder="Your Email" required>
-      </div>
-      <div class="form-group">
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      </div>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-  
-  <style>
+  <form action="https://formsubmit.co/alwyn411@gmail.com" method="POST">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Your Name" required />
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Your Email" required />
+    </div>
+    <div class="form-group">
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<style>
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-inline: 5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .form-group {
+    position: relative;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-color, #fff);
+    font-family: inherit;
+    font-size: 1rem;
+    transition:
+      border-color 0.3s,
+      box-shadow 0.3s;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color, #4a9eff);
+    box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  button {
+    background-color: var(--secondary-color, #4a9eff);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      transform 0.2s;
+    align-self: flex-start;
+  }
+
+  button:hover {
+    background-color: var(--secondary-color-dark, #3a8eff);
+    transform: translateY(-2px);
+  }
+
+  button:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 480px) {
     .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-      padding-inline: 5rem;
+      padding: 1.5rem 1rem;
     }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-  
-    .form-group {
-      position: relative;
-    }
-  
-    input, textarea {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      background-color: rgba(255, 255, 255, 0.05);
-      color: var(--text-color, #fff);
-      font-family: inherit;
-      font-size: 1rem;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-  
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-  
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: var(--secondary-color, #4a9eff);
-      box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
-    }
-  
-    input::placeholder, textarea::placeholder {
-      color: rgba(255, 255, 255, 0.5);
-    }
-  
+
     button {
-      background-color: var(--secondary-color, #4a9eff);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
-      align-self: flex-start;
+      width: 100%;
+      align-self: center;
     }
-  
-    button:hover {
-      background-color: var(--secondary-color-dark, #3a8eff);
-      transform: translateY(-2px);
-    }
-  
-    button:active {
-      transform: translateY(0);
-    }
-  
-    @media (max-width: 480px) {
-      .contact-form {
-        padding: 1.5rem 1rem;
-      }
-      
-      button {
-        width: 100%;
-        align-self: center;
-      }
-    }
-  </style>
-  
+  }
+</style>
