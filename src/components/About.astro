@@ -1,0 +1,164 @@
+---
+import { Image } from 'astro:assets';
+import aboutImage from '../assets/about.svg';
+---
+<section class="about" id="about">
+    <div class="image-holder">
+        <Image 
+            src={aboutImage} 
+            alt="Developer illustration" 
+            width={600} 
+            height={600} 
+            loading={'eager'}
+            class="about-image"
+        />
+    </div>
+    <div class="about-content">
+        <h2 class="section-title">About Me</h2>
+        <div class="content-wrapper">
+            <p>I'm a dedicated frontend developer with a passion for transforming concepts into elegant, high-performance web applications that deliver exceptional user experiences.</p>
+            <p>With over a year of professional experience, I've mastered <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>, along with modern frontend frameworks like <span class="highlight">React</span> & <span class="highlight">Angular</span> to create responsive and intuitive interfaces.</p>
+            <p>For backend development, I leverage the power of <span class="highlight">Java</span>, <span class="highlight">Go</span>, and <span class="highlight">Kotlin</span> to build robust server-side solutions.</p>
+            <p>My database expertise includes <span class="highlight">DynamoDB</span> and <span class="highlight">MySQL</span>, ensuring efficient data management and retrieval.</p>
+            <p>I'm proficient with cloud technologies like <span class="highlight">AWS</span> and containerization with <span class="highlight">Docker</span>, enabling scalable and reliable deployments.</p>
+            <p>I've implemented both <span class="highlight">RESTful</span> and <span class="highlight">GraphQL</span> APIs, providing flexible and efficient data exchange between client and server.</p>
+            <p>I thrive on continuous learning and staying at the forefront of emerging technologies. My commitment to quality and attention to detail ensures I deliver solutions that exceed expectations and create meaningful impact.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+  .about {
+    display: flex;
+    padding: 6rem 5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(var(--bg-gradient-1), 0.05), rgba(var(--bg-gradient-2), 0.1));
+    z-index: -1;
+    border-radius: 2rem;
+  }
+
+  .about-content {
+    flex: 1;
+    max-width: 650px;
+  }
+
+  .image-holder {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-image {
+    transition: transform 0.5s ease-in-out;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+  }
+
+  .about-image:hover {
+    transform: translateY(-10px);
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: var(--secondary-color);
+  }
+
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+  }
+
+  .content-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .about .about-content p {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+  }
+
+  .about .about-content p:hover {
+    opacity: 1;
+  }
+
+  .highlight {
+    color: var(--secondary-color);
+    font-weight: 600;
+    position: relative;
+    padding: 0 2px;
+    transition: color 0.3s ease;
+  }
+
+  .highlight:hover {
+    color: var(--accent-color, --tertiary-color);
+  }
+
+  @media (max-width: 1024px) {
+    .about {
+      padding: 4rem 3rem;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      padding: 3rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .about .about-content p {
+      font-size: 1rem;
+    }
+
+    .image-holder {
+      order: -1;
+      margin-bottom: 2rem;
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about {
+      padding: 2rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+    }
+  }
+</style>
