@@ -6,8 +6,7 @@ Welcome to my personal portfolio website — a modern, responsive, and interacti
 
 ## 🚀 Live Demo
 
-🔗 [View the live site here](https://alwyn-411.github.io/Portfolio/)
----
+## 🔗 [View the live site here](https://alwyn-411.github.io/Portfolio/)
 
 ## 🛠️ Technologies Used
 
@@ -16,21 +15,6 @@ Welcome to my personal portfolio website — a modern, responsive, and interacti
 | **Frontend**   | Astro, HTML, CSS, JavaScript      |
 | **Build Tool** | Vite                              |
 | **Deployment** | GitHub Pages (via GitHub Actions) |
-
----
-
-## 🧱 Project Structure
-├── public/ # Static assets
-├── src/
-│ ├── components/ # Reusable UI elements
-│ ├── layouts/ # Shared page layout components
-│ ├── pages/ # Main routes (Astro uses file-based routing)
-│ ├── styles/ # Global and scoped styles
-│ ├── data/ # Project, skills, and contact data
-│ └── utils/ # Utility functions
-├── astro.config.mjs # Astro configuration
-├── package.json # Project metadata and dependencies
-└── README.md # You're reading it
 
 ---
 
