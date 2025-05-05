@@ -1,148 +1,251 @@
 ---
 import { Image } from 'astro:assets';
-import aboutImage from '../assets/about.svg';
+import AboutImage from '../assets/about.svg';
 ---
 <section class="about" id="about">
-    <div class="image-holder">
-        <Image 
-            src={aboutImage} 
-            alt="Developer illustration" 
-            width={600} 
-            height={600} 
-            loading='eager'
-        />
+    <div class="content-container">
+        <h2 class="section-title">
+            About me 
+        </h2>
+        <div class="bio-content">
+            <p class="bio-paragraph">
+                I am a passionate, ever curious developer who loves to code and build stuff.
+            </p>
+            <p class="bio-paragraph">
+                I love challenges and I am always looking for new opportunities to learn and grow.
+            </p>
+            <p class="bio-paragraph">
+                I currently work as a <span class="highlight">Full Stack Developer</span> at Chennai, India.
+            </p>
+            <p class="bio-paragraph">
+                I am also an <span class="highlight">AI Engineer</span>, I love to build AI products and AI-based web applications.
+            </p>
+        </div>
     </div>
-    <div class="about-content">
-        <h2 class="section-title">About Me</h2>
-        <div class="content-wrapper">
-            <p>I'm a dedicated frontend developer with a passion for transforming concepts into elegant, high-performance web applications that deliver exceptional user experiences.</p>
-            <p>With over a year and a half of professional experience, I've mastered <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>, along with modern frontend frameworks like <span class="highlight">React</span> & <span class="highlight">Angular</span> to create responsive and intuitive interfaces.</p>
-            <p>For backend development, I leverage the power of <span class="highlight">Java</span>, <span class="highlight">Go</span>, and <span class="highlight">Kotlin</span> to build robust server-side solutions.</p>
-            <p>My database expertise includes <span class="highlight">DynamoDB</span> and <span class="highlight">MySQL</span>, ensuring efficient data management and retrieval.</p>
-            <p>I'm proficient with cloud technologies like <span class="highlight">AWS</span> and containerization with <span class="highlight">Docker</span>, enabling scalable and reliable deployments.</p>
-            <p>I've implemented both <span class="highlight">RESTful</span> and <span class="highlight">GraphQL</span> APIs, providing flexible and efficient data exchange between client and server.</p>
-            <p>I thrive on continuous learning and staying at the forefront of emerging technologies. My commitment to quality and attention to detail ensures I deliver solutions that exceed expectations and create meaningful impact.</p>
+
+    <div class="image-container">
+        <div class="image-wrapper">
+            <Image src={AboutImage} alt="Idea to Production" width={600} height={600} loading={'eager'}/>
+        </div>
+        <div class="floating-tags">
+            <div class="tag">Passionate</div>
+            <div class="tag">Creative</div>
+            <div class="tag">Problem Solver</div>
+            <div class="tag">Innovative</div>
         </div>
     </div>
 </section>
 
 <style>
-  .about {
-    display: flex;
-    padding-inline: 5rem;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(var(--bg-gradient-1), 0.05), rgba(var(--bg-gradient-2), 0.1));
-    z-index: -1;
-    border-radius: 2rem;
-  }
-
-  .about-content {
-    flex: 1;
-    max-width: 650px;
-  }
-
-  .image-holder {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    position: relative;
-    display: inline-block;
-    color: var(--secondary-color);
-  }
-
-  .section-title::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60px;
-    height: 4px;
-    background: var(--secondary-color);
-    border-radius: 2px;
-  }
-
-  .content-wrapper {
-    margin-bottom: 2rem;
-  }
-
-  .about .about-content p {
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1.2rem;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
-  }
-
-  .about .about-content p:hover {
-    opacity: 1;
-  }
-
-  .highlight {
-    color: var(--secondary-color);
-    font-weight: 600;
-    position: relative;
-    padding: 0 2px;
-    transition: color 0.3s ease;
-  }
-
-  .highlight:hover {
-    color: var(--accent-color, --tertiary-color);
-  }
-
-  @media (max-width: 1024px) {
     .about {
-      padding: 4rem 3rem;
-      gap: 2rem;
+        display: flex;
+        padding: 5rem;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+        position: relative;
+        overflow: hidden;
     }
-  }
 
-  @media (max-width: 768px) {
-    .about {
-      flex-direction: column;
-      padding: 3rem 1.5rem;
+    .about::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(var(--bg-gradient-1), 0.05), rgba(var(--bg-gradient-2), 0.1));
+        z-index: -1;
+        border-radius: 2rem;
+    }
+
+    .content-container {
+        flex: 1;
+        max-width: 650px;
     }
 
     .section-title {
-      font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+        display: inline-block;
+        color: var(--secondary-color);
     }
 
-    .about .about-content p {
-      font-size: 1rem;
+    .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: var(--secondary-color);
+        border-radius: 2px;
     }
 
-    .image-holder {
-      order: -1;
-      margin-bottom: 2rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .about {
-      padding: 2rem 1rem;
+    .bio-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
     }
 
-    .section-title {
-      font-size: 1.8rem;
+    .bio-paragraph {
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        line-height: 1.7;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+        position: relative;
+        padding-left: 1.5rem;
     }
-  }
+
+    .bio-paragraph:hover {
+        opacity: 1;
+    }
+
+    .bio-paragraph::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--secondary-color);
+        font-weight: bold;
+    }
+
+    .highlight {
+        color: var(--secondary-color);
+        font-weight: 600;
+        position: relative;
+        padding: 0 2px;
+        transition: color 0.3s ease;
+    }
+
+    .highlight:hover {
+        color: var(--accent-color, --tertiary-color);
+    }
+
+    .image-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 500px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    @keyframes morphBlob {
+        0% {
+            border-radius: 60% 40% 70% 30% / 60% 30% 70% 40%;
+        }
+        50% {
+            border-radius: 40% 60% 30% 70% / 30% 60% 40% 70%;
+        }
+        100% {
+            border-radius: 70% 30% 50% 50% / 40% 40% 60% 60%;
+        }
+    }
+
+    .floating-tags {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .tag {
+        position: absolute;
+        background: rgba(var(--bg-gradient-1), 0.8);
+        color: var(--secondary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: float 6s infinite ease-in-out;
+    }
+
+    .tag:nth-child(1) {
+        top: 20%;
+        left: 15%;
+        animation-delay: 0s;
+    }
+
+    .tag:nth-child(2) {
+        top: 30%;
+        right: 10%;
+        animation-delay: 1.5s;
+    }
+
+    .tag:nth-child(3) {
+        bottom: 25%;
+        left: 10%;
+        animation-delay: 3s;
+    }
+
+    .tag:nth-child(4) {
+        bottom: 15%;
+        right: 15%;
+        animation-delay: 4.5s;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .about {
+            padding: 4rem 3rem;
+            gap: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .about {
+            flex-direction: column-reverse;
+            padding: 3rem 1.5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .bio-paragraph {
+            font-size: 1rem;
+        }
+
+        .image-container {
+            margin-bottom: 2rem;
+            min-height: 350px;
+        }
+        
+        .tag {
+            font-size: 0.8rem;
+            padding: 0.4rem 0.8rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about {
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+        }
+        
+        .image-container {
+            min-height: 300px;
+        }
+    }
 </style>
