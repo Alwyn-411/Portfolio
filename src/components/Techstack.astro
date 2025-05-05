@@ -4,7 +4,7 @@ import techstackImage from '../assets/techstack.svg';
 
 const skills = [
   { category: "Frontend", items: [
-    { name: "React", rating: 4 },
+    { name: "React", rating: 5 },
     { name: "HTML", rating: 4 },
     { name: "CSS", rating: 3 },
     { name: "JavaScript", rating: 4 }
@@ -13,7 +13,7 @@ const skills = [
     { name: "Kotlin", rating: 4 },
     { name: "Java", rating: 3 },
     { name: "Python", rating: 4 },
-    { name: "Go", rating: 3 }
+    { name: "Go", rating: 4 }
   ]},
   { category: "Database & Cloud", items: [
     { name: "NoSQL", rating: 4 },
@@ -143,6 +143,8 @@ const skills = [
     width: 100%;
     height: 100%;
     pointer-events: none;
+    top: 0;
+    left: 0;
   }
 
   .tech-badge {
@@ -155,36 +157,38 @@ const skills = [
     font-size: 0.9rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: float 6s infinite ease-in-out;
+    z-index: 5;
+    backdrop-filter: blur(4px);
   }
 
   .tech-badge:nth-child(1) {
     top: 15%;
-    left: 10%;
+    left: 5%;
     animation-delay: 0s;
   }
 
   .tech-badge:nth-child(2) {
-    top: 25%;
-    right: 15%;
+    top: 20%;
+    right: 5%;
     animation-delay: 1s;
   }
 
   .tech-badge:nth-child(3) {
     bottom: 30%;
-    left: 10%;
+    left: 5%;
     animation-delay: 2s;
   }
 
   .tech-badge:nth-child(4) {
-    bottom: 25%;
-    right: 20%;
+    bottom: 20%;
+    right: 5%;
     animation-delay: 3s;
   }
 
   .tech-badge:nth-child(5) {
     top: 5%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     animation-delay: 4s;
   }
 
@@ -304,6 +308,31 @@ const skills = [
     .skills-grid {
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
+    
+    /* Adjust badge positions for medium screens */
+    .tech-badge:nth-child(1) {
+      top: 10%;
+      left: 2%;
+    }
+    
+    .tech-badge:nth-child(2) {
+      top: 15%;
+      right: 2%;
+    }
+    
+    .tech-badge:nth-child(3) {
+      bottom: 25%;
+      left: 2%;
+    }
+    
+    .tech-badge:nth-child(4) {
+      bottom: 15%;
+      right: 2%;
+    }
+    
+    .tech-badge:nth-child(5) {
+      top: 2%;
+    }
   }
 
   @media (max-width: 768px) {
@@ -330,6 +359,33 @@ const skills = [
       font-size: 0.8rem;
       padding: 0.4rem 0.8rem;
     }
+    
+    /* Adjust floating badges for mobile layout */
+    .tech-badge:nth-child(1) {
+      top: 5%;
+      left: 5%;
+    }
+    
+    .tech-badge:nth-child(2) {
+      top: 5%;
+      right: 5%;
+    }
+    
+    .tech-badge:nth-child(3) {
+      bottom: 5%;
+      left: 5%;
+    }
+    
+    .tech-badge:nth-child(4) {
+      bottom: 5%;
+      right: 5%;
+    }
+    
+    .tech-badge:nth-child(5) {
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
   }
 
   @media (max-width: 480px) {
@@ -347,6 +403,38 @@ const skills = [
     
     .image-holder {
       min-height: 300px;
+    }
+    
+    /* Further adjust badges for very small screens */
+    .tech-badge {
+      font-size: 0.7rem;
+      padding: 0.3rem 0.7rem;
+    }
+    
+    .tech-badge:nth-child(1) {
+      top: 10%;
+      left: 2%;
+    }
+    
+    .tech-badge:nth-child(2) {
+      top: 10%;
+      right: 2%;
+    }
+    
+    .tech-badge:nth-child(3) {
+      bottom: 10%;
+      left: 2%;
+    }
+    
+    .tech-badge:nth-child(4) {
+      bottom: 10%;
+      right: 2%;
+    }
+    
+    .tech-badge:nth-child(5) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 </style>

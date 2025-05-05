@@ -1,0 +1,292 @@
+---
+import { Image } from 'astro:assets';
+import TestProctorImage from '../assets/test.svg';
+import StyleExtractImage from '../assets/excel.svg';
+import UserForgeImage from '../assets/go.svg';
+
+const projects = [
+  {
+    title: "Vigilance",
+    originalName: "Proctoring App",
+    description: "AI-powered exam monitoring system that uses ML techniques to analyze user behavior and flag suspicious activities during test sessions.",
+    tech: ["React", "TypeScript", "Machine Learning", "Computer Vision"],
+    link: "https://github.com/Alwyn-411/proctoring-app",
+    image: TestProctorImage
+  },
+  {
+    title: "StyleExtract",
+    originalName: "Excel Style Parser",
+    description: "Tool that extracts and preserves styling information from Excel spreadsheets, maintaining visual fidelity when importing data.",
+    tech: ["React", "TypeScript", "ExcelJS", "CSS"],
+    link: "https://github.com/Alwyn-411/Excel-Style-Parser",
+    image: StyleExtractImage
+  },
+  {
+    title: "UserForge",
+    originalName: "REST User Service",
+    description: "Lightweight Go-based user management microservice with authentication, authorization, and profile management capabilities.",
+    tech: ["Go", "REST API", "JWT", "Microservices"],
+    link: "https://github.com/Alwyn-411/REST-User-Service",
+    image: UserForgeImage
+  }
+];
+---
+
+<section class="projects" id="projects">
+  <h2 class="section-title">Projects</h2>
+  <p class="section-intro">
+    Here are some of my recent projects. Each represents my passion for clean code, 
+    innovative solutions, and continuous learning.
+  </p>
+  
+  <div class="projects-grid">
+    {projects.map((project) => (
+      <div class="project-card">
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">{project.title}</h3>
+            <span class="project-original-name">{project.originalName}</span>
+          </div>
+          <p class="project-description">{project.description}</p>
+          <div class="tech-tags">
+            {project.tech.map(tech => (
+              <span class="tech-tag">{tech}</span>
+            ))}
+          </div>
+          <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-link">
+            View Project <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="project-image-container">
+          <Image 
+            src={project.image} 
+            alt={`${project.title} project illustration`} 
+            width={300} 
+            height={200} 
+            class="project-image"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding: 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(var(--bg-gradient-1), 0.05), rgba(var(--bg-gradient-2), 0.1));
+    z-index: -1;
+    border-radius: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    color: var(--secondary-color);
+  }
+
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+  }
+
+  .section-intro {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .project-card {
+    display: flex;
+    background: rgba(var(--bg-gradient-1), 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  .project-card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .project-content {
+    flex: 3;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-header {
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.3rem;
+  }
+
+  .project-original-name {
+    font-size: 0.9rem;
+    color: var(--tertiary-color);
+    opacity: 0.8;
+  }
+
+  .project-description {
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .tech-tags {
+    font-family: 'Kurale', serif;
+    font-weight: bold;
+    font-style: italic;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-tag {
+    background: rgba(var(--bg-gradient-2), 0.2);
+    color: var(--secondary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    width: fit-content;
+  }
+
+  .project-link:hover {
+    color: var(--tertiary-color);
+  }
+
+  .arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .project-link:hover .arrow {
+    transform: translateX(5px);
+  }
+
+  .project-image-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(var(--bg-gradient-1), 0.1), rgba(var(--bg-gradient-2), 0.2));
+    padding: 1.5rem;
+    overflow: hidden;
+  }
+
+  .project-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .project-image {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 1024px) {
+    .projects {
+      padding: 4rem 3rem;
+    }
+    
+    .project-title {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .projects {
+      padding: 3rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .section-intro {
+      font-size: 1rem;
+    }
+    
+    .project-card, 
+    .project-card:nth-child(even) {
+      flex-direction: column;
+    }
+    
+    .project-content {
+      padding: 1.5rem;
+    }
+    
+    .project-image-container {
+      min-height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .projects {
+      padding: 2rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+    }
+    
+    .project-title {
+      font-size: 1.4rem;
+    }
+    
+    .tech-tags {
+      gap: 0.4rem;
+    }
+    
+    .tech-tag {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+    }
+  }
+</style>
