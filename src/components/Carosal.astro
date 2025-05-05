@@ -39,17 +39,29 @@ const logos = [
 
 <style>
   .carosal {
-    padding: 60px 0;
+    padding: 30px 0;
   }
   
   .glide__slide {
-    text-align: center;
-    padding: 0 40px;
-  }
-  
-  .glide__slide img {
-    height: 50px;
-  }
+  height: auto;
+  overflow: visible;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glide__slide img {
+  transition: transform 0.3s ease;
+  height: 50px;
+  transform-origin: center center;
+}
+
+.glide__slide img:hover {
+  transform: scale(1.55);
+  z-index: 10;
+}
+
 </style>
 
 <script>
@@ -61,9 +73,9 @@ const logos = [
       type: 'carousel',
       autoplay: 2000,
       perView: 9,
-      gap: 25,
+      gap: 15,
       animationDuration: 750,
-      hoverpause: false,
+      hoverpause: true,
       breakpoints: {
         800: { perView: 3 },
         480: { perView: 2 }
